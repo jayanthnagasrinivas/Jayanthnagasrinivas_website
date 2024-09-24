@@ -447,6 +447,179 @@ main {
 .social-item .social-link:hover { color: var(--light-gray); }
 
 
+/* General layout for mobile devices */
+@media (max-width: 768px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column; /* Stacking content vertically for mobile */
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    background-color: #111; /* Dark background for a professional look */
+    color: #fff; /* White text for better contrast */
+  }
+
+  .avatar-box {
+    margin-bottom: 15px; /* Space below the avatar */
+  }
+
+  .avatar-box img {
+    width: 100px; /* Size of the avatar on mobile */
+    height: 100px;
+    border-radius: 50%; /* Circular avatar */
+    object-fit: cover; /* Ensures the image covers the avatar-box fully */
+  }
+
+  .info-content {
+    text-align: center; /* Centers the name and title */
+    margin-bottom: 10px;
+  }
+
+  .info-content .name {
+    font-size: 20px; /* Professional font size for name */
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ffcc00; /* Eye-catching color for the name */
+  }
+
+  .info-content .title {
+    font-size: 14px; /* Subtitle font size */
+    color: #ccc; /* Subtle color for titles */
+    margin-bottom: 10px;
+  }
+
+  .info_more-btn {
+    margin-top: 10px;
+    background-color: #ffcc00; /* Professional color for the button */
+    color: #111;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .info_more-btn:hover {
+    background-color: #e6b800; /* Slight color change on hover */
+  }
+
+  .sidebar-info_more {
+    display: none; /* Hidden by default */
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    background-color: #222; /* Darker background for details section */
+    border-radius: 10px;
+  }
+
+  .sidebar-info_more.active {
+    display: block; /* Show when active */
+  }
+
+  .contacts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Full width on mobile */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Spacing between items */
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+  }
+
+  .contact-item .icon-box {
+    font-size: 18px;
+    color: #ffcc00; /* Icon color for contrast */
+  }
+
+  .contact-item .contact-info {
+    font-size: 14px; /* Professional font size */
+  }
+
+  .contact-link {
+    color: #ffcc00; /* Link color */
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .social-list {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .social-item a {
+    font-size: 18px;
+    color: #ffcc00;
+    transition: color 0.3s ease;
+  }
+
+  .social-item a:hover {
+    color: #e6b800;
+  }
+}
+
+/* Ensure sidebar transitions nicely */
+.sidebar {
+  transition: all 0.3s ease;
+}
+
+main {
+  padding: 15px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Make the additional details toggleable */
+.info_more-btn[data-sidebar-btn]:active + .sidebar-info_more,
+.info_more-btn[data-sidebar-btn]:focus + .sidebar-info_more {
+  display: block; /* Show the contacts when button is clicked */
+}
+
+/* Additional styling for desktop for consistency */
+@media (min-width: 769px) {
+  .sidebar {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .avatar-box {
+    margin-right: 20px;
+  }
+
+  .avatar-box img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .info-content {
+    text-align: left;
+    max-width: 70%;
+  }
+
+  .info_more-btn {
+    margin-top: 20px;
+  }
+
+  .sidebar-info_more {
+    margin-top: 20px;
+  }
+
+  .contacts-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+
+
 
 
 
