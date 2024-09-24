@@ -446,112 +446,174 @@ main {
 
 .social-item .social-link:hover { color: var(--light-gray); }
 
-/* Media query for mobile devices */
+/* General layout for mobile devices */
 @media (max-width: 768px) {
   .sidebar {
     display: flex;
-    flex-direction: row; /* Aligns the image and content horizontally */
-    align-items: flex-start;
-    padding: 10px;
-    width: 100%; /* Full width on mobile */
+    flex-direction: column; /* Stacking content vertically for mobile */
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    background-color: #111; /* Dark background for a professional look */
+    color: #fff; /* White text for better contrast */
   }
 
   .avatar-box {
-    flex-shrink: 0; /* Prevents image from shrinking */
-    margin-right: 15px; /* Adds space between the image and content */
+    margin-bottom: 15px; /* Space below the avatar */
   }
 
   .avatar-box img {
-    width: 80px; /* Set a fixed width for the image */
-    height: 80px; /* Set a fixed height */
-    border-radius: 50%; /* Adds a professional circular border */
+    width: 100px; /* Size of the avatar on mobile */
+    height: 100px;
+    border-radius: 50%; /* Circular avatar */
+    object-fit: cover; /* Ensures the image covers the avatar-box fully */
   }
 
   .info-content {
-    display: flex;
-    flex-direction: column; /* Stack name and titles vertically */
-    justify-content: center;
-    max-width: calc(100% - 100px); /* Ensures content fits next to the image */
+    text-align: center; /* Centers the name and title */
+    margin-bottom: 10px;
   }
 
   .info-content .name {
-    font-size: 18px; /* Professional font size for name */
-    font-weight: bold; /* Bold name */
+    font-size: 20px; /* Professional font size for name */
+    font-weight: bold;
     margin-bottom: 5px;
+    color: #ffcc00; /* Eye-catching color for the name */
   }
 
   .info-content .title {
-    font-size: 14px; /* Professional font size for titles */
-    color: #666; /* Subtle color for titles */
-    margin-bottom: 5px;
+    font-size: 14px; /* Subtitle font size */
+    color: #ccc; /* Subtle color for titles */
+    margin-bottom: 10px;
   }
 
   .info_more-btn {
-    font-size: 12px;
     margin-top: 10px;
+    background-color: #ffcc00; /* Professional color for the button */
+    color: #111;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .info_more-btn:hover {
+    background-color: #e6b800; /* Slight color change on hover */
   }
 
   .sidebar-info_more {
-    margin-top: 10px;
-    max-height: 200px;
-    overflow-y: auto; /* Enable scrolling for additional details */
-    padding-left: 100px; /* Offset for photo */
-    padding-right: 10px;
+    display: none; /* Hidden by default */
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    background-color: #222; /* Darker background for details section */
+    border-radius: 10px;
+  }
+
+  .sidebar-info_more.active {
+    display: block; /* Show when active */
   }
 
   .contacts-list {
-    padding: 10px 0;
     list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Full width on mobile */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Spacing between items */
   }
 
   .contact-item {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
     gap: 10px;
-    margin-bottom: 10px;
+    color: #fff;
+  }
+
+  .contact-item .icon-box {
+    font-size: 18px;
+    color: #ffcc00; /* Icon color for contrast */
   }
 
   .contact-item .contact-info {
     font-size: 14px; /* Professional font size */
   }
 
+  .contact-link {
+    color: #ffcc00; /* Link color */
+    text-decoration: none;
+    font-weight: 500;
+  }
+
   .social-list {
     display: flex;
     gap: 15px;
-    justify-content: flex-start;
+    justify-content: center;
+    margin-top: 20px;
   }
 
-  main {
-    padding: 10px;
+  .social-item a {
+    font-size: 18px;
+    color: #ffcc00;
+    transition: color 0.3s ease;
   }
 
-  /* Adjusting for more consistency in desktop */
-  @media (min-width: 769px) {
-    .sidebar {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-    }
+  .social-item a:hover {
+    color: #e6b800;
+  }
+}
 
-    .avatar-box img {
-      width: 120px;
-      height: 120px;
-    }
+/* Ensure sidebar transitions nicely */
+.sidebar {
+  transition: all 0.3s ease;
+}
 
-    .info-content {
-      max-width: calc(100% - 150px); /* Adjust width for desktop view */
-    }
+main {
+  padding: 15px;
+  font-family: 'Arial', sans-serif;
+}
 
-    .info_more-btn {
-      margin-top: 20px;
-    }
+/* Make the additional details toggleable */
+.info_more-btn[data-sidebar-btn]:active + .sidebar-info_more,
+.info_more-btn[data-sidebar-btn]:focus + .sidebar-info_more {
+  display: block; /* Show the contacts when button is clicked */
+}
 
-    .sidebar-info_more {
-      padding-left: 150px;
-      padding-right: 10px;
-    }
+/* Additional styling for desktop for consistency */
+@media (min-width: 769px) {
+  .sidebar {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .avatar-box {
+    margin-right: 20px;
+  }
+
+  .avatar-box img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .info-content {
+    text-align: left;
+    max-width: 70%;
+  }
+
+  .info_more-btn {
+    margin-top: 20px;
+  }
+
+  .sidebar-info_more {
+    margin-top: 20px;
+  }
+
+  .contacts-list {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
