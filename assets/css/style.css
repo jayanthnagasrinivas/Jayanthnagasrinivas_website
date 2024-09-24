@@ -446,7 +446,6 @@ main {
 
 .social-item .social-link:hover { color: var(--light-gray); }
 
-
 /* General layout for mobile devices */
 @media (max-width: 768px) {
   .sidebar {
@@ -457,6 +456,7 @@ main {
     padding: 15px;
     background-color: #111; /* Dark background for a professional look */
     color: #fff; /* White text for better contrast */
+    position: relative; /* Ensure relative positioning for absolute elements */
   }
 
   .avatar-box {
@@ -497,6 +497,7 @@ main {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    position: relative; /* Ensure it's in the correct position */
   }
 
   .info_more-btn:hover {
@@ -576,12 +577,6 @@ main {
   font-family: 'Arial', sans-serif;
 }
 
-/* Make the additional details toggleable */
-.info_more-btn[data-sidebar-btn]:active + .sidebar-info_more,
-.info_more-btn[data-sidebar-btn]:focus + .sidebar-info_more {
-  display: block; /* Show the contacts when button is clicked */
-}
-
 /* Additional styling for desktop for consistency */
 @media (min-width: 769px) {
   .sidebar {
@@ -617,7 +612,6 @@ main {
     justify-content: space-between;
   }
 }
-
 
 
 
