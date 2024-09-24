@@ -446,59 +446,6 @@ main {
 
 .social-item .social-link:hover { color: var(--light-gray); }
 
-/* General layout for mobile devices */
-@media (max-width: 768px) {
-  .sidebar {
-    /* Ensure no changes to desktop layout */
-    display: flex;
-    flex-direction: column; /* Stacking content vertically for mobile */
-    align-items: center;
-    padding: 15px;
-    background-color: #111; /* Dark background for a professional look */
-    color: #fff; /* White text for better contrast */
-    width: 100%; /* Full width on mobile */
-  }
-
-  .info_more-btn {
-    position: relative; /* Keep the button positioned correctly */
-    margin-top: 10px;
-    background-color: #ffcc00; /* Professional color for the button */
-    color: #111;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    z-index: 10; /* Ensure button stays above other elements */
-  }
-
-  .sidebar-info_more {
-    display: none; /* Hidden by default */
-    margin-top: 20px;
-    width: 100%; /* Full width on mobile */
-    padding: 15px;
-    background-color: #222; /* Darker background for details section */
-    border-radius: 10px;
-  }
-
-  .sidebar-info_more.active {
-    display: block; /* Show when active */
-  }
-
-  .contacts-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%; /* Full width on mobile */
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Spacing between items */
-  }
-
-  /* Additional styles for the rest of the elements can be added here */
-}
-
-
 
 
 
