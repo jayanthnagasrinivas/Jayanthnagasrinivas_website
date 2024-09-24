@@ -14,6 +14,14 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 // sidebar toggle functionality for mobile
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
+// Toggle functionality for phone and email (contact details)
+const moreInfoBtn = document.querySelector(".info_more-btn"); // Button to show details
+const moreInfoSection = document.querySelector(".sidebar-info_more"); // Section with details
+
+// Add event listener to the button to show/hide contact details
+moreInfoBtn.addEventListener("click", function() {
+  elementToggleFunc(moreInfoSection); // Toggle active class
+});
 
 
 // testimonials variables
