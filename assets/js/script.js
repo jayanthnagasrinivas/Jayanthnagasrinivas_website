@@ -14,6 +14,14 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 // sidebar toggle functionality for mobile
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
+const elementToggleFunc = function (elem) { 
+  elem.classList.toggle("active"); 
+};
+
+// Sidebar toggle functionality for mobile
+sidebarBtn.addEventListener("click", function () { 
+  elementToggleFunc(sidebar); 
+});
 
 
 // testimonials variables
