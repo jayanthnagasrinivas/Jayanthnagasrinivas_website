@@ -447,6 +447,60 @@ main {
 .social-item .social-link:hover { color: var(--light-gray); }
 
 
+@media only screen and (max-width: 768px) {
+  /* Adjust the sidebar height to be auto so it expands naturally */
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    overflow: visible;
+  }
+
+  .sidebar-info {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Make avatar smaller on mobile */
+  .avatar-box {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Adjust the name and title to fit next to the avatar */
+  .info-content {
+    flex: 1;
+    margin-left: 10px;
+  }
+
+  /* Name and title alignment */
+  .info-content .name {
+    font-size: var(--fs-4); /* Make the text smaller */
+  }
+
+  .info-content .title {
+    font-size: var(--fs-6);
+  }
+
+  /* Adjust the button */
+  .info_more-btn {
+    position: relative;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+  }
+
+  /* Sidebar contact details visibility */
+  .sidebar-info_more {
+    display: none;
+  }
+
+  /* When sidebar is active, display contact details */
+  .sidebar.active .sidebar-info_more {
+    display: block;
+  }
+}
 
 
 
