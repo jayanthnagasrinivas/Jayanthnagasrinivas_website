@@ -496,7 +496,6 @@ main {
   /* Adjust title font size */
   .info-content .title {
     font-size: 12px; /* Smaller font for job title on mobile */
-    padding-left: 15px;
   }
 
   /* Hide additional content (contacts) until toggled */
