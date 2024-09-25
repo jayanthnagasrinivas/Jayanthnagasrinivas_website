@@ -447,7 +447,68 @@ main {
 .social-item .social-link:hover { color: var(--light-gray); }
 
 
+/* Mobile Layout */
+@media (max-width: 768px) {
 
+  /* Sidebar becomes full-screen width */
+  .sidebar {
+    width: 100%;
+    max-height: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+
+  /* Image and text side by side */
+  .sidebar-info {
+    flex-direction: row; /* Change to row layout on mobile */
+    align-items: flex-start;
+  }
+
+  .avatar-box img {
+    width: 50px; /* Adjust image size for mobile */
+    height: 50px; /* Adjust height for mobile */
+  }
+
+  .info-content {
+    flex-direction: column; /* Keep text in column layout */
+    align-items: flex-start;
+  }
+
+  .info-content .name {
+    font-size: var(--fs-4); /* Slightly smaller text size on mobile */
+  }
+
+  .info_more-btn {
+    top: 5px;
+    right: 5px;
+    padding: 5px; /* Smaller button on mobile */
+  }
+
+  /* Show contact information when user taps/clicks */
+  .sidebar-info_more {
+    display: none; /* Initially hide the contact info on mobile */
+  }
+
+  .sidebar.active .sidebar-info_more {
+    display: block; /* Show contact info when sidebar is active */
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .contacts-list {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-item {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+}
 
 
 
