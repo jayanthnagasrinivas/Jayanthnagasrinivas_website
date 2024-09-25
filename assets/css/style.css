@@ -464,7 +464,7 @@ main {
   .sidebar-info {
     flex-direction: row; /* Ensure image and info are side by side */
     align-items: center;
-    gap: 13px;
+    gap: 15px;
   }
 
   /* Adjust avatar size */
