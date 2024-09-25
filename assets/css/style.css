@@ -525,6 +525,7 @@ main {
   /* Social icons styling for mobile */
   .social-list {
     justify-content: center; /* Center the social icons horizontally */
+    align-items: center;
     display: flex; /* Ensure flexbox is applied */
     gap: 10px; /* Smaller gap between social icons */
     width: 100%;  /* Smaller gap between social icons */
