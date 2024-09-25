@@ -478,6 +478,7 @@ main {
     font-size: 18px; /* Adjust name font size for mobile */
     margin-bottom: 2px; /* Adjust this value to decrease space */
     line-height: 1.1;
+    padding-left: 15px;
   }
 
   /* Stack the names vertically */
@@ -490,6 +491,7 @@ main {
   /* Adjust title font size */
   .info-content .title {
     font-size: 12px; /* Smaller font for job title on mobile */
+    padding-left: 15px;
   }
 
   /* Hide additional content (contacts) until toggled */
@@ -517,7 +519,7 @@ main {
 
   /* Social icons styling for mobile */
   .social-list {
-    justify-content: flex-start;
+    justify-content: center;
     gap: 10px; /* Smaller gap between social icons */
   }
 
