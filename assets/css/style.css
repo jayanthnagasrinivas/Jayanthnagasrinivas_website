@@ -476,6 +476,8 @@ main {
   /* Adjust name text size */
   .info-content .name {
     font-size: 18px; /* Adjust name font size for mobile */
+    margin-bottom: 2px; /* Adjust this value to decrease space */
+    line-height: 1.1;
   }
 
   /* Stack the names vertically */
@@ -488,11 +490,6 @@ main {
   /* Adjust title font size */
   .info-content .title {
     font-size: 12px; /* Smaller font for job title on mobile */
-  }
-
-  .info-content .name {
-    margin-bottom: 2px; /* Adjust this value to decrease space */
-    line-height: 1.1;
   }
 
   /* Hide additional content (contacts) until toggled */
