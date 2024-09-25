@@ -479,13 +479,13 @@ main {
    .name {
      font-size: 24px; /* Keep font size for names as is */
      font-weight: bold;
-     margin-bottom: 1px; /* Adjust spacing between the names */
+     margin-bottom: 0.5px; /* Adjust spacing between the names */
    }
 
    .title {
      font-size: 16px; /* Keep font size for job titles */
      color: #b3b3b3; /* Optional: Lighter color for job titles */
-     margin-bottom: 1px; /* Adjust spacing between job titles */
+     margin-bottom: 0.5px; /* Adjust spacing between job titles */
    }
 
 
