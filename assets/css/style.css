@@ -446,47 +446,7 @@ main {
 
 .social-item .social-link:hover { color: var(--light-gray); }
 
-/* Default (Laptop/Desktop) Layout - No Changes */
-.sidebar {
-  display: flex;
-  flex-direction: column; /* Assuming this is your current laptop layout */
-}
 
-.sidebar .image-container {
-  width: 100px; /* Adjust according to your needs */
-}
-
-.sidebar .text-container {
-  flex-grow: 1;
-}
-
-/* Mobile Layout */
-@media only screen and (max-width: 768px) {
-  /* Adjust for small screens like mobiles */
-  .sidebar {
-    display: flex;
-    flex-direction: row; /* Changes the layout to horizontal on mobile */
-    align-items: center;
-  }
-
-  .sidebar .image-container {
-    width: 50px; /* Smaller image on mobile */
-  }
-
-  .sidebar .text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .sidebar .details {
-    display: none; /* Initially hide details */
-  }
-
-  .scroll-icon:active + .details {
-    display: block; /* Show details when scroll icon is clicked */
-  }
-}
 
 
 
