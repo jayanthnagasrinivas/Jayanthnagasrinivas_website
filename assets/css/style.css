@@ -464,18 +464,18 @@ main {
   .sidebar-info {
     flex-direction: row; /* Ensure image and info are side by side */
     align-items: center;
-    gap: 50px;
+    gap: 13px;
   }
 
   /* Adjust avatar size */
   .avatar-box img {
-    width: 75px; /* Smaller image for mobile */
-    height: 100px; /* Match height for the avatar */
+    width: 85px; /* Smaller image for mobile */
+    height: 120px; /* Match height for the avatar */
   }
 
   /* Adjust name text size */
   .info-content .name {
-    font-size: 16px; /* Adjust name font size for mobile */
+    font-size: 18px; /* Adjust name font size for mobile */
   }
 
   /* Stack the names vertically */
