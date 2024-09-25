@@ -516,21 +516,12 @@ main {
   }
 
    /* Social icons styling for mobile */
-.social-list {
-  display: flex; /* Flexbox layout */
-  justify-content: center; /* Center the whole group initially */
-  gap: 10px; /* Space between the icons */
-  width: 100%; /* Ensure the container takes full width */
-  padding: 10px 0; /* Optional: Add padding for better spacing */
-  list-style: none; /* Remove list bullet points */
-}
-
-/* Center the middle icon, and evenly distribute others */
-.social-list li {
-  flex: 1; /* Make sure all icons have equal space */
-  display: flex; /* Make each list item a flex container */
-  justify-content: center; /* Center the icon inside each list item */
-}
+   .social-list {
+    justify-content: center; /* Center the social icons horizontally */
+    display: flex; /* Ensure flexbox is applied */
+    gap: 10px; /* Smaller gap between social icons */
+    width: 100%; /* Ensure full-width container */
+  }
 
 
   /* Hide the sidebar toggle button */
