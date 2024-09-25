@@ -469,8 +469,8 @@ main {
 
   /* Adjust avatar size */
   .avatar-box img {
-    width: 85px; /* Smaller image for mobile */
-    height: 120px; /* Match height for the avatar */
+    width: 100px; /* Smaller image for mobile */
+    height: 200px; /* Match height for the avatar */
   }
 
   /* Adjust name text size */
