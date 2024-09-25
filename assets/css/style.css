@@ -456,7 +456,7 @@ main {
   .sidebar {
     width: 100%; /* Full width for mobile */
     display: block; /* Ensure it's visible */
-    padding: 10px; /* Add some padding for mobile */
+    padding: 50px; /* Add some padding for mobile */
     max-height: none; /* Remove height limit */
   }
 
