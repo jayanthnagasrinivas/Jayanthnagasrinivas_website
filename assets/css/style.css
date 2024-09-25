@@ -482,7 +482,7 @@ main {
   .info-content {
     display: flex;
     flex-direction: column; /* Ensure names are stacked */
-    gap: 5px;
+    gap: 10px;
   }
 
   /* Adjust title font size */
