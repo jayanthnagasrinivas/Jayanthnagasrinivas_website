@@ -469,8 +469,8 @@ main {
 
   /* Adjust avatar size */
   .avatar-box img {
-    width: 85px; /* Smaller image for mobile */
-    height: 120px; /* Match height for the avatar */
+    width: 75px; /* Smaller image for mobile */
+    height: 100px; /* Match height for the avatar */
   }
 
   /* Adjust name text size */
@@ -488,6 +488,11 @@ main {
   /* Adjust title font size */
   .info-content .title {
     font-size: 12px; /* Smaller font for job title on mobile */
+  }
+
+  .info-content .name {
+    margin-bottom: 2px; /* Adjust this value to decrease space */
+    line-height: 1.1;
   }
 
   /* Hide additional content (contacts) until toggled */
