@@ -519,8 +519,10 @@ main {
 
   /* Social icons styling for mobile */
   .social-list {
-    justify-content: center;
+    justify-content: center; /* Center the social icons horizontally */
+    display: flex; /* Ensure flexbox is applied */
     gap: 10px; /* Smaller gap between social icons */
+    width: 100%;  /* Smaller gap between social icons */
   }
 
   /* Hide the sidebar toggle button */
