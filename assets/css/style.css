@@ -463,7 +463,7 @@ main {
   /* Change sidebar info layout */
   .sidebar-info {
     flex-direction: row; /* Ensure image and info are side by side */
-    align-items: right;
+    align-items: center;
     gap: 10px;
   }
 
