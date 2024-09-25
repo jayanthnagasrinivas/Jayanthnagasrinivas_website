@@ -456,14 +456,14 @@ main {
   .sidebar {
     width: 100%; /* Full width for mobile */
     display: block; /* Ensure it's visible */
-    padding: 50px; /* Add some padding for mobile */
+    padding: 15px; /* Add some padding for mobile */
     max-height: none; /* Remove height limit */
   }
 
   /* Change sidebar info layout */
   .sidebar-info {
     flex-direction: row; /* Ensure image and info are side by side */
-    align-items: center;
+    align-items: right;
     gap: 10px;
   }
 
