@@ -478,7 +478,6 @@ main {
     font-size: 18px; /* Adjust name font size for mobile */
     margin-bottom: 2px; /* Adjust this value to decrease space */
     line-height: 1.1;
-    padding-left: 15px;
   }
 
   /* Stack the names vertically */
