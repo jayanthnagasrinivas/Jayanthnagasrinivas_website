@@ -486,12 +486,6 @@ main {
     flex-direction: column; /* Ensure names are stacked */
     gap: 5px;
   }
-	
-   /* Adjust the second name to take up less space */
-  .info-content .name:last-child {
-    flex: 0 0 70%; /* Adjust the second name to take less space */
-    margin-left: 10px; /* Add a little space in front */
-  }
 
   /* Adjust title font size */
   .info-content .title {
@@ -522,13 +516,23 @@ main {
   }
 
   /* Social icons styling for mobile */
-  .social-list {
-    justify-content: center; /* Center the social icons horizontally */
-    align-items: center;
-    display: flex; /* Ensure flexbox is applied */
-    gap: 10px; /* Smaller gap between social icons */
-    width: 100%;  /* Smaller gap between social icons */
-  }
+.social-list {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center the entire list */
+  align-items: center; /* Vertically center the icons */
+  gap: 10px; /* Space between the icons */
+  width: 100%; /* Ensure the social list takes full width */
+}
+
+.social-item {
+  flex: 1 1 auto; /* Allow the icons to spread evenly */
+  text-align: center; /* Center each icon */
+}
+
+.social-item:nth-child(2) {
+  flex: 0 1 auto; /* Make sure the middle icon is a bit more flexible */
+}
+
 
   /* Hide the sidebar toggle button */
   .info_more-btn {
