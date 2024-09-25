@@ -487,6 +487,12 @@ main {
     flex-direction: column; /* Ensure names are stacked */
     gap: 5px;
   }
+	
+   /* Adjust the second name to take up less space */
+  .info-content .name:last-child {
+    flex: 0 0 70%; /* Adjust the second name to take less space */
+    margin-left: 10px; /* Add a little space in front */
+  }
 
   /* Adjust title font size */
   .info-content .title {
