@@ -515,22 +515,21 @@ main {
     gap: 10px;
   }
 
-  /* Social icons styling for mobile */
+   /* Social icons styling for mobile */
 .social-list {
-  display: flex; /* Use flexbox for alignment */
-  justify-content: center; /* Center the entire list */
-  align-items: center; /* Vertically center the icons */
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Center the whole group initially */
   gap: 10px; /* Space between the icons */
-  width: 100%; /* Ensure the social list takes full width */
+  width: 100%; /* Ensure the container takes full width */
+  padding: 10px 0; /* Optional: Add padding for better spacing */
+  list-style: none; /* Remove list bullet points */
 }
 
-.social-item {
-  flex: 1 1 auto; /* Allow the icons to spread evenly */
-  text-align: center; /* Center each icon */
-}
-
-.social-item:nth-child(2) {
-  flex: 0 1 auto; /* Make sure the middle icon is a bit more flexible */
+/* Center the middle icon, and evenly distribute others */
+.social-list li {
+  flex: 1; /* Make sure all icons have equal space */
+  display: flex; /* Make each list item a flex container */
+  justify-content: center; /* Center the icon inside each list item */
 }
 
 
