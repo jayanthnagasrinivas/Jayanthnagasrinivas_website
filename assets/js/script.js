@@ -14,13 +14,11 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 // sidebar toggle functionality for mobile
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
-const elementToggleFunc = function (elem) { 
-  elem.classList.toggle("active"); 
-};
+const sidebarBtn = document.querySelector(".info_more-btn");
+const sidebar = document.querySelector(".sidebar");
 
-// Sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { 
-  elementToggleFunc(sidebar); 
+sidebarBtn.addEventListener("click", function() {
+  sidebar.classList.toggle("active");
 });
 
 
