@@ -467,6 +467,27 @@ main {
     gap: 15px;
   }
 
+   /* Centering names and job titles */
+.info-content {
+  display: flex;
+  flex-direction: column; /* Stack names and titles vertically */
+  align-items: center; /* Center them horizontally */
+  text-align: center; /* Ensure the text is centered */
+}
+
+.name {
+  font-size: 24px; /* Keep font size for names as is */
+  font-weight: bold;
+  margin-bottom: 5px; /* Adjust spacing between the names */
+}
+
+.title {
+  font-size: 16px; /* Keep font size for job titles */
+  color: #b3b3b3; /* Optional: Lighter color for job titles */
+  margin-bottom: 5px; /* Adjust spacing between job titles */
+}
+
+
   /* Adjust avatar size */
   .avatar-box img {
     width: 75px; /* Smaller image for mobile */
