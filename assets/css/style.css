@@ -447,60 +447,66 @@ main {
 .social-item .social-link:hover { color: var(--light-gray); }
 
 
+/* This CSS will apply only to screens that are 768px wide or less (common mobile width) */
 @media only screen and (max-width: 768px) {
-  /* Adjust the sidebar height to be auto so it expands naturally */
+  /* Sidebar style for mobile view */
   .sidebar {
-    display: flex;
-    flex-direction: column;
-    max-height: 100%;
-    overflow: visible;
+    position: fixed; /* Fix the sidebar on the screen */
+    top: 0;
+    left: 0;
+    width: 80%; /* Adjust width to make it mobile-friendly */
+    height: 100vh; /* Make the sidebar take up full screen height */
+    overflow-y: auto; /* Enable scrolling in case of excess content */
+    transform: translateX(-100%); /* Hide it initially */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
   }
 
-  .sidebar-info {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  /* When the sidebar is active, slide it in */
+  .sidebar.active {
+    transform: translateX(0); /* Show the sidebar */
   }
 
-  /* Make avatar smaller on mobile */
+  /* Make the avatar smaller for mobile view */
   .avatar-box {
     width: 50px;
     height: 50px;
+    margin-bottom: 15px;
   }
 
-  /* Adjust the name and title to fit next to the avatar */
+  /* Adjust the name and title to fit in mobile view */
   .info-content {
-    flex: 1;
-    margin-left: 10px;
+    text-align: left;
+    font-size: 16px;
   }
 
-  /* Name and title alignment */
   .info-content .name {
-    font-size: var(--fs-4); /* Make the text smaller */
+    font-size: 1.2em;
   }
 
   .info-content .title {
-    font-size: var(--fs-6);
+    font-size: 1em;
   }
 
-  /* Adjust the button */
+  /* Sidebar button for toggling in mobile */
   .info_more-btn {
-    position: relative;
-    top: 0;
-    right: 0;
-    font-size: 12px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
   }
 
-  /* Sidebar contact details visibility */
+  /* Sidebar contact details should be hidden initially */
   .sidebar-info_more {
     display: none;
   }
 
-  /* When sidebar is active, display contact details */
+  /* When sidebar is active, show contact details */
   .sidebar.active .sidebar-info_more {
     display: block;
   }
 }
+
 
 
 
