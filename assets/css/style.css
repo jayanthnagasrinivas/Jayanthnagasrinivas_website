@@ -468,24 +468,25 @@ main {
   }
 
    /* Centering names and job titles */
-.info-content {
-  display: flex;
-  flex-direction: column; /* Stack names and titles vertically */
-  align-items: center; /* Center them horizontally */
-  text-align: center; /* Ensure the text is centered */
-}
+   .info-content {
+     display: flex;
+     flex-direction: column; /* Stack names and titles vertically */
+     align-items: center; /* Center them horizontally */
+     text-align: center; /* Ensure the text is centered */
+     margin-left: 20px;
+   }
 
-.name {
-  font-size: 24px; /* Keep font size for names as is */
-  font-weight: bold;
-  margin-bottom: 5px; /* Adjust spacing between the names */
-}
+   .name {
+     font-size: 24px; /* Keep font size for names as is */
+     font-weight: bold;
+     margin-bottom: 2px; /* Adjust spacing between the names */
+   }
 
-.title {
-  font-size: 16px; /* Keep font size for job titles */
-  color: #b3b3b3; /* Optional: Lighter color for job titles */
-  margin-bottom: 5px; /* Adjust spacing between job titles */
-}
+   .title {
+     font-size: 16px; /* Keep font size for job titles */
+     color: #b3b3b3; /* Optional: Lighter color for job titles */
+     margin-bottom: 2px; /* Adjust spacing between job titles */
+   }
 
 
   /* Adjust avatar size */
